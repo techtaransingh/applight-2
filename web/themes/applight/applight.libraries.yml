@@ -1,0 +1,14 @@
+# Main theme library.
+global:
+  js:
+    https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js: { type: external, minified: true }
+    js/scrollIt.min.js: {}
+    js/wow.min.js: {}
+    js/custom.js: {}
+  
+  css:
+   theme:
+      https://use.fontawesome.com/releases/v5.1.0/css/all.css : { type: external, minified: true } 
+      https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700 : { type: external, minified: true }     
+      css/animate.css: {}
+      css/style.css: {}

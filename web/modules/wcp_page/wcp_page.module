@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for wcp_page module.
+ */
+/**
+ * Implements hook_theme().
+ */
+function wcp_page_theme($existing, $type, $theme, $path) {  
+  return [
+    'nodelist_template' => [
+      // Declare the variables that can be passed to the template.
+      'variables' => ['node_list' => []], 
+       // Specify the template file that will be used.
+      'template' => 'nodelist-template'
+    ],  
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+
+function wcp_page_page_attachments(array &$attachments) {
+
+  // Attach the CSS library to every page on the site.
+  $attachments['#attached']['library'][] = 'wcp_page/wcp_page.styles';
+
+}

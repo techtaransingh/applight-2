@@ -1,0 +1,6 @@
+wcp_page.settings_form:
+  title: 'wcp_page'
+  description: 'Configure wcp_page.'
+  parent: system.admin_config_system
+  route_name: wcp_page.settings_form
+  weight: 10

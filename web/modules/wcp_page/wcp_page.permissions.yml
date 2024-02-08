@@ -1,0 +1,4 @@
+administer wcp_page configuration:
+  title: 'Administer wcp_page configuration'
+  description: 'Optional description.'
+  restrict access: true

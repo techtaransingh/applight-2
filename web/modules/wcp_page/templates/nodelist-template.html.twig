@@ -1,0 +1,51 @@
+{# Check if the node list variable is set #}
+{% if node_list %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Article</th>
+        <th>Form Type</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {# Iterate through each node in the list #}
+      {% for node in node_list %}
+        <tr>
+        {# Check if node title exists #}
+          <td>{{ node.title }}</td>
+        {# Check if node body exists #}
+          <td>{{ node.body }}</td>
+          <td>
+          {# Check if form_article_label and Id exists #}
+            {% if node.form_article_label %}
+              {% if node.form_article_id %}
+                <a href="{{ path('entity.node.canonical', {'node': node.form_article_id}) }}">{{ node.form_article_label }}</a>
+              {% else %}
+                {{ node.form_article_label }}
+              {% endif %}
+            {% else %}
+              No Article Available
+            {% endif %}
+          </td>
+          <td>
+          {# Check if form_type_name and Id exists #}
+            {% if node.form_type_name %}
+              {% if node.form_type_id %}
+                <a href="{{ path('entity.taxonomy_term.canonical', {'taxonomy_term': node.form_type_id}) }}">{{ node.form_type_name }}</a>
+              {% else %}
+                {{ node.form_type_name }}
+              {% endif %}
+            {% else %}
+              No Form Available
+            {% endif %}
+          </td>
+          {# Check if node date exists #}
+          <td>{{ node.date }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

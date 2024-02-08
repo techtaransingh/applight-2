@@ -1,0 +1,12 @@
+wcp_page.styles:
+  css:
+    theme:
+      assets/vendor/select2/dist/css/select2.css: {}
+      assets/vendor/select2/dist/css/select2.min.css: {}
+  js:
+     assets/vendor/select2/dist/js/select2.full.js: {}
+     assets/vendor/select2/dist/js/select2.full.min.js: {}
+     assets/vendor/select2/dist/js/select2.js: {}
+     /assets/vendor/select2/dist/js/select2.min.js: {}
+  dependencies:
+    - core/jquery

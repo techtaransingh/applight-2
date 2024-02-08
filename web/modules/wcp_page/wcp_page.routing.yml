@@ -1,0 +1,25 @@
+wcp_page.example:
+  path: '/wcp-page/list'
+  defaults:
+    _title: 'Node List'
+    _controller: '\Drupal\wcp_page\Controller\WcpPageController::list'
+  requirements:
+    _permission: 'access content'
+    _theme: 'nodelist_template'
+
+wcp_page.settings_form:
+  path: '/admin/config/system/wcp-page'
+  defaults:
+    _title: 'wcp_page settings'
+    _form: 'Drupal\wcp_page\Form\SettingsForm'
+  requirements:
+    _permission: 'administer wcp_page configuration'
+
+wcp_page.custom:
+  path: '/wcp-page/custom'
+  defaults:
+    _title: 'Custom Form'
+    _form: 'Drupal\wcp_page\Form\CustomForm'
+  requirements:
+    _permission: 'access content'
+
